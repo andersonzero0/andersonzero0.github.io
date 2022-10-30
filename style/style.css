@@ -36,15 +36,15 @@ body {
     /*border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;*/
     margin-bottom: 30px;
-    height: 120px;
+    height: 80px;
     padding: 10px;
 }
 
 .logo {
     display: block;
     margin: auto;
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     border-radius: 90px;
 }
 
@@ -55,8 +55,8 @@ body {
     margin-top: 150px;
     border-radius: 5px;
     padding: 10px;
-    min-width: 320px;
-    max-width: 800px;
+    min-width: 300px;
+    max-width: 700px;
 }
 
 /*ASIDE*/
@@ -96,7 +96,7 @@ body {
 }
 .menu {
     position: fixed;
-    top: 200px;
+    top: 130px;
     margin-left: 50px;
     text-align: center;
 }
@@ -107,9 +107,8 @@ body {
     color: white;
     font-family: var(--font-destaque);
     font-weight: 500;
-    padding: 20px;
+    padding: 10px;
     margin: auto;
-    text-align: center;
     text-align: center;
 }
 
@@ -125,9 +124,10 @@ h1, p {
     color: var(--cor5);
     font-family: var(--font-destaque);
     font-weight: bolder;
-    font-size: 2.1em;
+    font-size: 25px;
     background-color: var(--cor3);
-    border-radius: 5px; 
+    border-radius: 5px;
+    padding: 3px;
 }
 
 .div-h2 {
@@ -158,7 +158,7 @@ h1, p {
 h2 {
     font-family: var(--font-destaque);
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     margin: 10px;
 }
