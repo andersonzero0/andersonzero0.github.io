@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+
+* {
+    font-family: 'Nanum Gothic Coding', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: rgb(95,176,168);
+    background: radial-gradient(circle, rgba(95,176,168,1) 0%, rgba(152,176,141,1) 50%, rgba(192,176,141,1)100%);
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    margin: 20vh auto;
+}
+
+.div_img {
+    background-color: white;
+    padding: 10px;
+    border-radius: 500px;
+}
+
+.div_img:hover {
+    background-color: black;
+    transition: step-end;
+} 
+
+.img {
+    width: 200px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: ease 0.15s;
+}
+
+.img:hover {
+    transition: ease 0.15s;
+    transform: scale(1.05);
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 500px;
+
+    width: 110px;
+    margin: 10px auto;
+}
+
+.redes > a {
+    margin: 0 10px;
+}
+
+.redes > a > img {
+    width: 35px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.links > div {
+    transition: ease 0.1s;
+    margin: 0 20px;
+}
+
+.links > div:hover{
+    transform: scale(1.1);
+    transition: ease 0.1s;
+}
+
+.links > div:hover p{
+    background-color: white;
+    color: lightgray;
+    border: 3px solid lightgray;
+}
+
+p {
+    border: 3px solid white;
+    padding: 10px 20px;
+    border-radius: 500px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
