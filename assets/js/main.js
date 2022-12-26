@@ -6,16 +6,41 @@ var content_data = document.getElementById('content_data');
 var btn_openTerminal = document.getElementById('btn_openTerminal');
 var navbar = document.getElementById('navbar');
 
+var btn_apps = document.getElementById('btn_apps');
+var span_apps = document.getElementById('span_apps');
+
 var btn_exitViewPort = document.getElementById("btn_exitViewPort");
 var btn_maxViewPort = document.getElementById('btn_maxViewPort');
 var profile = document.getElementById("profile");
 var btn_openProfile = document.getElementById("btn_openProfile");
+
+var btn_exitViewProj = document.getElementById("btn_exitViewProj");
+var btn_maxViewProj = document.getElementById('btn_maxViewProj');
+var projetos = document.getElementById("projetos");
+var btn_openProjetos = document.getElementById("btn_openProjetos");
 // VARIAVEIS - END
 
 // DISPLAY - START
 terminal.style.display = "none";
 profile.style.display = "none";
+projetos.style.display = "none";
 // DISPLAY - END
+
+// HOVER NAVBAR - START
+
+function hoverNavbar() {
+    navbar.onmouseover = function opacity0Navbar() {
+        navbar.style.opacity = 1;
+    }
+    navbar.onmouseout = function opacity1Navbar() {
+        navbar.style.opacity = 0;
+    }
+}
+
+function DestvHoverNavbar() {
+    navbar.onmouseout = navbar.style.opacity = 1;
+}
+// HOVER NAVBAR - END
 
 // HEADER - START
 now = new Date;
@@ -29,6 +54,7 @@ content_data.innerHTML = dayName[now.getDay() ] + ", " + now.getDate() + " de " 
 btn_openProfile.onclick = function openProfile() {
     profile.style.transition = "ease 0.2s";
     profile.style.display = "block";
+    hoverNavbar();
 }
 
 var verifMaxViewProf = false;
@@ -42,9 +68,27 @@ btn_maxViewPort.onclick = function maxViewPort() {
         navbar.style.display = "none";
         verifMaxViewProf = true;
     }else {
-        profile.style.width = "900px";
-        profile.style.height = "500px";
-        profile.style.margin = "50px auto";
+        var width = document.body.clientWidth;
+        var styleWidth;
+        var styleHeight;
+        var styleMargin;
+        if(width > 1023) {
+            styleWidth = "900px";
+            styleHeight = "500px";
+            styleMargin = "50px auto";
+        }else if(width <= 1023 && width >= 768) {
+            styleWidth = "720px";
+            styleHeight = "700px";
+            styleMargin = "50px auto";
+        }else if(width < 768) {
+            styleWidth = "490px";
+            styleHeight = "530px";
+            styleMargin = "50px auto";
+        }
+
+        profile.style.width = styleWidth;
+        profile.style.height = styleHeight;
+        profile.style.margin = styleMargin;
         navbar.style.display = "block";
         verifMaxViewProf = false;
     }
@@ -53,10 +97,74 @@ btn_maxViewPort.onclick = function maxViewPort() {
 btn_exitViewPort.onclick = function exitTerminalViewPort() {
     profile.style.display = "none";
     navbar.style.display = "block";
+    
+    if(profile.style.display === "block" || projetos.style.display === "block" || 
+    terminal.style.display === "block"){
+        hoverNavbar();
+    }else{
+        DestvHoverNavbar();
+    }
 }
 // PROFILE - END
 
 // PROJETOS - START
+
+btn_openProjetos.onclick = function openProjetos() {
+    projetos.style.transition = "ease 0.2s";
+    projetos.style.display = "block";
+    hoverNavbar();
+}
+
+var verifMaxViewProj = false;
+btn_maxViewProj.onclick = function maxViewProj() {
+    var width = document.body.clientWidth;
+    if(verifMaxViewProj === false) {
+        projetos.style.transition = "ease 0.2s";
+        projetos.style.width = "100%";
+        projetos.style.height = "100vh";
+        document.querySelector('.projetos_painel').style.height = "100%";
+        projetos.style.marginTop = 0;
+        navbar.style.transition = "ease 0.2s";
+        navbar.style.display = "none";
+        verifMaxViewProj = true;
+    }else {
+        var width = document.body.clientWidth;
+        var styleWidth;
+        var styleHeight;
+        var styleMargin;
+        if(width > 1023) {
+            styleWidth = "850px";
+            styleHeight = "500px";
+            styleMargin = "50px auto";
+        }else if(width <= 1023 && width >= 768) {
+            styleWidth = "720px";
+            styleHeight = "500px";
+            styleMargin = "50px auto";
+        }else if(width < 768) {
+            styleWidth = "490px";
+            styleHeight = "500px";
+            styleMargin = "50px auto";
+        }
+
+        projetos.style.width = styleWidth;
+        projetos.style.height = styleHeight;
+        projetos.style.margin = styleMargin;
+        navbar.style.display = "block";
+        verifMaxViewProj = false;
+    }
+}
+
+btn_exitViewProj.onclick = function exitTerminalViewProj() {
+    projetos.style.display = "none";
+    navbar.style.display = "block";
+    
+    if(profile.style.display === "block" || projetos.style.display === "block" || 
+    terminal.style.display === "block"){
+        hoverNavbar();
+    }else{
+        DestvHoverNavbar();
+    }
+}
 
 // HITNUMBER - START
 
@@ -81,6 +189,7 @@ btn_openTerminal.onclick = function openTerminal() {
     terminal.style.transition = "ease 0.2s";
     terminal.style.display = "block";
     document.getElementById('inputEntrada').focus();
+    hoverNavbar();
 }
 
 var verifMaxView = false;
@@ -96,9 +205,26 @@ btn_maxView.onclick = function maxView() {
         navbar.style.display = "none";
         verifMaxView = true;
     }else {
-        terminal.style.width = "700px";
-        terminal.style.height = "400px";
-        terminal.style.marginTop = "100px";
+        var width = document.body.clientWidth;
+        var styleWidth;
+        var styleHeight;
+        var styleMargin;
+        if(width > 1023) {
+            styleWidth = "700px";
+            styleHeight = "400px";
+            styleMargin = "100px";
+        }else if(width <= 1023 && width >= 768) {
+            styleWidth = "720px";
+            styleHeight = "400px";
+            styleMargin = "100px";
+        }else if(width < 768) {
+            styleWidth = "490px";
+            styleHeight = "400px";
+            styleMargin = "50px";
+        }
+        terminal.style.width = styleWidth;
+        terminal.style.height = styleHeight;
+        terminal.style.marginTop = styleMargin;
         navbar.style.display = "block";
         verifMaxView = false;
         document.getElementById('inputEntrada').focus();
@@ -108,5 +234,12 @@ btn_maxView.onclick = function maxView() {
 btn_exitView.onclick = function exitTerminalView() {
     terminal.style.display = "none";
     navbar.style.display = "block";
+    
+    if(profile.style.display === "block" || projetos.style.display === "block" || 
+    terminal.style.display === "block"){
+        hoverNavbar();
+    }else{
+        DestvHoverNavbar();
+    }
 }
 // TERMINAL - END
