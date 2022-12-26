@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 </head>
-<body>
+<body onload="efectImgHitNumber1()">
 
     <header>
 
@@ -20,6 +20,7 @@
 
     <main>
 
+        <!--HEADER - START-->
         <header class="headerMain">
 
             <div class="data">
@@ -31,15 +32,17 @@
             </div>
             
         </header>
+        <!--HEADER - END-->
 
+        <!--NAVBAR - START-->
         <nav id="navbar" class="navbar">
 
-            <a href="">
+            <a id="btn_openProfile" style="cursor: pointer;">
                 <div class="btn_redesSociais">
-                    <img class="img_redS" src="assets/images/user.png" alt="">
+                    <img class="img_redS_Profile" src="assets/images/profile_img.jpeg" alt="">
                 </div>
                 <div>
-                    <p>Portifolio</p>
+                    <p>Sobre mim</p>
                 </div>
             </a>
 
@@ -107,7 +110,110 @@
             </a>
             
         </nav>
+        <!--NAVBAR - END-->
 
+        <!--PORTIFOLIO - START-->
+        <div id="profile" class="conteiner_portifolio">
+
+            <div class="header_portifolio">
+                <div class="text_portifolio">
+                    <p>Sobre mim</p>
+                </div>
+
+                <div class="opt_portifolio">
+                    <span id="btn_maxViewPort" class="material-symbols-outlined">
+                        check_box_outline_blank
+                    </span>
+
+                    <span id="btn_exitViewPort" class="material-symbols-outlined">
+                        close
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="painel_portifolio">
+                <section class="section_Portifolio">
+                    <div class="content_ImgPort">
+                        <img src="assets/images/profile_img.jpeg" alt="">
+                        <h1 class="text_port">Anderson Viana</h1>
+                    </div>
+
+                    <div>
+
+                        <p class="text_port"><strong>- Objetivo:</strong> Em busca de uma oportunidade de estágio/emprego, para aprimorar meus conhecimentos e habilidades, visando sempre o crescimento entre a empresa e eu.</p>
+
+                        <p class="text_port"><strong>- Qualificação:</strong>
+                            <ul class="cont_skillsPort">
+                                <li>Estudo Intermediário em cibersegurança;</li>
+                                <li>Estudo Intermediário em Front-end;</li>
+                                <li>Estudo Intermediário em Back-end.</li>
+                            </ul>
+                        </p>
+
+                        <p class="text_port"><strong>- Habilidades:</strong>
+                            <ul class="cont_skillsPort">
+                                <li>Noções sobre comunicação;</li>
+                                <li>Noções sobre trabalho em equipe;</li>
+                                <li>Facilidade em aprender;</li>
+                                <li>Disponibilidade de horário.</li>
+                            </ul>
+                        </p>
+
+                    </div>
+                </section>
+            </div>
+            
+        </div>
+        <!--PORTIFOLIO - END-->
+
+        <!--PROJETOS - START-->
+        <div class="conteiner_portifolio">
+
+            <div class="header_portifolio">
+                <div class="text_portifolio">
+                    <p>Projetos</p>
+                </div>
+
+                <div class="opt_portifolio">
+                    <span class="material-symbols-outlined">
+                        check_box_outline_blank
+                    </span>
+
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="projetos_painel">
+
+                <div class="navbar_proj">
+                    <a href="#content_hitnumber">HitNumber<a>
+
+                    <a href="#content_pizzaria">Pizzaria<a>
+                
+                    <a href="#content_fashionStyle">Fashion Style</a>
+                </div>
+                
+                <div id="content_hitnumber" class="blocos_proj">
+                    <h1>HitNumber</h1>
+                    <p>Jogo de adivinhar qual número foi sorteado, mas só há 5 tentativas. Existem 3 niveis: Nivel 1; Nivel 2; Nivel 3.</p>
+
+                    <div>
+                        <img id="img_HitNumber" src="" alt="">
+                        <a href="">START</a>
+                    </div>
+                </div>
+
+                <div id="content_pizzaria" class="blocos_proj"></div>
+                <div id="content_fashionStyle" class="blocos_proj"></div>
+            </div>
+        </div>
+        <!--PROJETOS - END-->
+
+        <!--TERMINAL - START-->
         <div id="terminal" class="conteiner_terminal">
 
             <div class="header_terminal">
@@ -116,10 +222,6 @@
                 </div>
 
                 <div class="opt_terminal">
-
-                    <span class="material-symbols-outlined">
-                        remove
-                    </span>
 
                     <span id="btn_maxView" class="material-symbols-outlined">
                         check_box_outline_blank
@@ -145,6 +247,7 @@
             </div>
 
         </div>
+        <!--TERMINAL - END-->
         
     </main>
 
