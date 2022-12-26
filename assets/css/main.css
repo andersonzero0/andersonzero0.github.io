@@ -74,6 +74,7 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
+    justify-items: center;
     align-items: center;
     padding: 5px;
     cursor: pointer;
