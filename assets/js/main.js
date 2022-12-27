@@ -81,9 +81,9 @@ btn_maxViewPort.onclick = function maxViewPort() {
             styleHeight = "700px";
             styleMargin = "50px auto";
         }else if(width < 768) {
-            styleWidth = "490px";
+            styleWidth = "300px";
             styleHeight = "530px";
-            styleMargin = "50px auto";
+            styleMargin = "10px auto";
         }
 
         profile.style.width = styleWidth;
@@ -141,9 +141,9 @@ btn_maxViewProj.onclick = function maxViewProj() {
             styleHeight = "500px";
             styleMargin = "50px auto";
         }else if(width < 768) {
-            styleWidth = "490px";
+            styleWidth = "300px";
             styleHeight = "500px";
-            styleMargin = "50px auto";
+            styleMargin = "10px auto";
         }
 
         projetos.style.width = styleWidth;
@@ -218,9 +218,9 @@ btn_maxView.onclick = function maxView() {
             styleHeight = "400px";
             styleMargin = "100px";
         }else if(width < 768) {
-            styleWidth = "490px";
+            styleWidth = "300px";
             styleHeight = "400px";
-            styleMargin = "50px";
+            styleMargin = "10px";
         }
         terminal.style.width = styleWidth;
         terminal.style.height = styleHeight;
