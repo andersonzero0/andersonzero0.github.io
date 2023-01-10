@@ -243,5 +243,36 @@ main {
     justify-content: space-around;
     justify-items: center;
     align-items: center;
+
+    transition: ease 1s;
+}
+
+.effectPainel {
+    transform: scale(0.0);
+    opacity: 0;
+}
+
+.conteiner_infoSkills {
+    width: 600px;
+    aspect-ratio: 16 / 9;
+
+    background-color: var(--colorWhite);
+    transform: scale(0.3);
+    opacity: 0;
+    
+    display: none;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    transition: ease 1s;
+    padding: 0 5px;
+}
+
+.effectInfoSkills {
+    transform: scale(1);
+    opacity: 1;
+    transition: ease 1s;
 }
 /* #skills - End */
