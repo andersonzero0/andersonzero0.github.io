@@ -178,6 +178,22 @@ main {
     color: var(--colorWhite);
 }
 
+.btn_backSkills {
+    background-color: transparent;
+    border-style: none;
+    position: absolute;
+    top: 80px;
+
+    cursor: pointer;
+
+    display: none;
+}
+
+.btn_backSkills > img {
+    width: 50px;
+    filter: invert();
+}
+
 .box_skills {
     display: flex;
     flex-direction: row;
@@ -208,8 +224,13 @@ main {
 }
 
 .itemSkillSelect {
-    width: 200px;
-    height: 70px;
+    width: 80px;
+    aspect-ratio: 1 / 1;
+    margin-top: 40px;
+}
+
+.itemSkillSelect:hover{
+    transition: ease 0.2s;
 }
 
 .itemSkillSelect > img {
@@ -244,7 +265,7 @@ main {
     justify-items: center;
     align-items: center;
 
-    transition: ease 1s;
+    transition: ease 0.5s;
 }
 
 .effectPainel {
@@ -266,13 +287,13 @@ main {
     justify-content: space-evenly;
     justify-items: center;
     align-items: center;
-    transition: ease 1s;
+    transition: ease .5s;
     padding: 0 5px;
 }
 
 .effectInfoSkills {
     transform: scale(1);
     opacity: 1;
-    transition: ease 1s;
+    transition: ease 0.5s;
 }
 /* #skills - End */

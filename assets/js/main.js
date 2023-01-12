@@ -8,6 +8,7 @@ const conteiner_painel = document.querySelector(".conteiner_painel");
 const title_infoSkills = document.querySelector(".title_infoSkills");
 const text_infoSkills = document.querySelector(".text_infoSkills");
 const conteiner_infoSkills = document.querySelector(".conteiner_infoSkills");
+const btn_backSkills = document.querySelector(".btn_backSkills");
 
 const arrayItensSkills = [];
 
@@ -47,9 +48,11 @@ function viewInfoSkills(id) {
     
         let idItem = arrayItensSkills.splice(id, 1);
 
+        notification_skills.style.display = 'none';
         itensSkills[idItem].classList.add("itemSkillSelect");
         itensImgSkill[idItem].classList.remove("itensImgSkill");
         conteiner_painel.classList.add("effectPainel");
+        btn_backSkills.style.display = 'block';
 
         setTimeout(() => {
             conteiner_painel.style.display = 'none';
@@ -75,7 +78,22 @@ function viewInfoSkills(id) {
 
 
 /* MAIN - START */
+effectNotifSkills();
 for(var i = 0; i < numberItensSkills; i++) {
     viewInfoSkills(i);
+}
+
+btn_backSkills.onclick = () => {
+    for(var iBack = 0; iBack < numberItensSkills; iBack++) {
+        itensSkills[iBack].style.display = 'flex';
+        itensSkills[iBack].classList.remove("itemSkillSelect");
+        itensImgSkill[iBack].classList.add("itensImgSkill");
+    }
+    notification_skills.style.display = 'flex';
+    btn_backSkills.style.display = 'none';
+    conteiner_painel.style.display = 'flex';
+    conteiner_painel.classList.remove("effectPainel");
+    conteiner_infoSkills.style.display = "none";
+    conteiner_infoSkills.classList.remove("effectInfoSkills");
 }
 /* MAIN - END */
