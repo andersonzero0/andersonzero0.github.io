@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-    res.render("../src/views/pages/home");
+    res.render("pages/home");
 })
 
 app.listen(PORT, () => {
