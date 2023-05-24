@@ -1,0 +1,17 @@
+:root {
+    --color-white: #F7F4EB;
+    --color-black_blue: #1A1728;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Fira Code', monospace;
+}
+
+body {
+    background-color: var(--color-white);
+    color: var(--color-black_blue);
+}
