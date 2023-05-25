@@ -11,8 +11,9 @@ header {
 
     user-select: none;
     position: sticky;
-        top: 0;
-        background-color: var(--color-white);
+    top: 0;
+    background-color: var(--color-white);
+    z-index: 1000;
 }
 
 h2 {
