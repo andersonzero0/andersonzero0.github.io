@@ -10,7 +10,7 @@ export function CardSkill(props) {
             </div>
 
             <div>
-                <strong>{props.title}</strong>
+                <strong className='title_card'>{props.title}</strong>
             </div>
             
         </div>

@@ -25,11 +25,6 @@ export function Projects() {
             link: "https://github.com/andersonzero0/ubuntu-layout"
         },
         {
-            title: "Layout Ubuntu (Gnome)",
-            description: "Layout (CSS and JavaScript)",
-            link: "https://github.com/andersonzero0/ubuntu-layout"
-        },
-        {
             title: "PsicoVerso",
             description: "Website (PHP and MySQL)",
             link: "https://github.com/andersonzero0/psicoverso"
