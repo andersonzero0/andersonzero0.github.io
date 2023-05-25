@@ -6,12 +6,6 @@ export function Header() {
 
     const [user, setUser] = useState({})
 
-    function handleTheme() {
-
-        
-        
-    }
-
     useEffect(() => {
 
         fetch("https://api.github.com/users/andersonzero0")
@@ -43,10 +37,6 @@ export function Header() {
 
                 <p>{user.name}</p>
                 <img src={user.avatar} alt="" />
-
-                <div onClick={handleTheme} className="box_moon">
-                    <Moon/>
-                </div>
 
             </div>
             

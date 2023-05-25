@@ -1,0 +1,36 @@
+.conteiner-card {
+    border: 4px solid var(--color-black_blue);
+    height: 150px;
+    aspect-ratio: 1 / 1 ;
+    border-radius: 4px;
+    padding: 5px;
+    transition: ease .3s;
+}
+
+.conteiner-card:hover .img_Card {
+    filter: invert(1);
+    transition: ease .3s;
+}
+
+.conteiner-card:hover {
+    background-color: var(--color-black_blue);
+    color: var(--color-white);
+    transition: ease .3s;
+}
+
+.conteiner-card > div {
+    height: 50%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_Card {
+    width: 50px;
+}
+
+strong {
+    font-size: 20px;
+}

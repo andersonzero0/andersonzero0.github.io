@@ -9,9 +9,14 @@
     box-sizing: border-box;
     
     font-family: 'Fira Code', monospace;
+    user-select: none;
 }
 
 body {
     background-color: var(--color-white);
     color: var(--color-black_blue);
+
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }

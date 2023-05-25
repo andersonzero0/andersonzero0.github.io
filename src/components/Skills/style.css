@@ -1,0 +1,30 @@
+.conteiner-skills {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    max-width: 80%;
+}
+
+.conteiner-skills > h3 {
+    font-size: 32px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.conteiner-skills > h3 > span > img {
+    width: 24px;
+}
+
+.conteiner-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}

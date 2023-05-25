@@ -24,7 +24,7 @@ header > div {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 5px;
 }
 
 .box_user {
