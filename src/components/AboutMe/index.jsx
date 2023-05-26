@@ -8,8 +8,8 @@ export function AboutMe() {
             <h1> <span><img className='icon_about' src="./aboutme_icon.png"/></span> ABOUT ME</h1>
 
             <div className='box-social'>
-                <a href="https://github.com/andersonzero0"><Linkedin /></a>
-                <a href="https://linkedin.com/in/andersonvianaa"><Github /></a>
+                <a href="https://linkedin.com/in/andersonvianaa"><Linkedin /></a>
+                <a href="https://github.com/andersonzero0"><Github /></a>
             </div>
             
             <div className='conteiner-about'>
