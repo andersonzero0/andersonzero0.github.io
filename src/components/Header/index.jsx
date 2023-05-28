@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Moon } from "lucide-react"; 
 import './style.css';
 
 export function Header() {
