@@ -1,5 +1,5 @@
 import Header from "./components/header"
-import Profile from "./components/profile"
+import AboutMe from "./components/about-me"
 
 function App() {
 
@@ -21,9 +21,9 @@ function App() {
   }, []) */
   
   return (
-    <main className="h-screen flex flex-col gap-20 items-center w-full m-auto container">
+    <main className="flex flex-col gap-20 items-center w-full m-auto container divide-y-2">
       <Header/>
-      <Profile  />
+      <AboutMe  />
     </main>
   )
 }
