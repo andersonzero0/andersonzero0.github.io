@@ -5,7 +5,7 @@ import {
   Loader2,
   Twitter,
 } from "lucide-react";
-import DialogMessage from "./dialog-message";
+/*import DialogMessage from "./dialog-message";*/
 
 export default function AboutMe({
   name = "Anderson Viana",
@@ -56,7 +56,7 @@ export default function AboutMe({
               </a>
             </div>
 
-            <DialogMessage/>
+            {/*<DialogMessage/>*/}
           </div>
         </div>
       </span>
