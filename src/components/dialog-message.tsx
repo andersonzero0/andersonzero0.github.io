@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+/*import { useEffect, useState } from "react";
 import {
   Dialog,
   DialogClose,
@@ -96,3 +96,4 @@ export default function DialogMessage() {
     </Dialog>
   );
 }
+*/
