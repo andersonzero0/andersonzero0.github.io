@@ -28,3 +28,4 @@ export async function sendEmail({ name, email, message }: PropsSendEmail) {
     return error;
   }
 }
+*/
