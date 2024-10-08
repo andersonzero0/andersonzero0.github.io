@@ -1,56 +1,167 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Manrope", sans-serif;
+    color: white;
+  }
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
 }
 
-.main {
-  background-color: #0d1117ff;
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  padding: 24px;
-  flex-flow: column;
-  gap: 24px;
+@keyframes moveAround {
+  0% {
+    transform: translate(10vw, 5vh);
+  }
+  20% {
+    transform: translate(50vw, 25vh);
+  }
+  40% {
+    transform: translate(80vw, 50vh);
+  }
+  60% {
+    transform: translate(50vw, 75vh);
+  }
+  80% {
+    transform: translate(0, 100vh);
+  }
+  100% {
+    transform: translate(10vw, 0);
+  }
 }
 
-.name {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
+@keyframes moveAround2 {
+  0% {
+    transform: translate(90vw, 100vh);
+  }
+  20% {
+    transform: translate(10vw, 90vh);
+  }
+  40% {
+    transform: translate(10vw, 10vh);
+  }
+  60% {
+    transform: translate(90vw, 20vh);
+  }
+  80% {
+    transform: translate(65vw, 50vh);
+  }
+  100% {
+    transform: translate(90vw, 100vh);
+  }
 }
 
-.header {
-  display: flex;
-  gap: 24px;
-  align-items: center;
+.moving-div2 {
+  animation: moveAround2 60s linear infinite;
 }
 
-.avatar {
-  width: 64px;
-  border-radius: 100%;
-  outline: 2px solid white;
-  outline-offset: 4px;
+.moving-div {
+  animation: moveAround 60s linear infinite;
 }
 
-.div-main {
-  max-width: 1000px;
-  overflow: scroll;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-.footer {
-  color: white;
+@keyframes appear-fade {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.open-terminal {
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px;
-  font-weight: bold;
-  font-size: 18px;
-  gap: 8px;
-  cursor: pointer;
+@keyframes appear-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes disappear-zoom {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.block-fade {
+  animation: appear-fade linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 100%, exit 0 cover 100%;
+}
+
+.block-zoom {
+  animation: appear-zoom linear, disappear-zoom linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%, exit 0% cover 140%;
 }
