@@ -5,7 +5,10 @@ import Typical from "react-typical";
 
 export function Hero() {
   return (
-    <section className="flex flex-col items-center gap-10 h-screen w-full justify-center block-zoom">
+    <section
+      id="hero"
+      className="flex scroll-m-48 flex-col items-center gap-10 h-screen w-full justify-center block-zoom"
+    >
       <div className="flex flex-col items-center gap-4">
         <div className="flex flex-col items-center gap-3">
           <h1 className="scroll-m-20 text-4xl text-center font-extrabold tracking-tight lg:text-5xl">
@@ -29,7 +32,7 @@ export function Hero() {
         </div>
       </div>
 
-      <blockquote className="mt-6 border-l-2 pl-6 italic">
+      <blockquote className="mt-6 border-l-2 pl-6 italic text-center">
         <Typical
           steps={[
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
