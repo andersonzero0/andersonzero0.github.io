@@ -1,13 +1,13 @@
 import { Skills } from "./skills";
 import { Button } from "./ui/button";
-import { Github, Linkedin } from "lucide-react";
+import { Download, Github, Linkedin } from "lucide-react";
 import Typical from "react-typical";
 
 export function Hero() {
   return (
     <section
       id="hero"
-      className="flex scroll-m-48 flex-col items-center gap-10 h-screen w-full justify-center block-zoom"
+      className="flex scroll-m-48 flex-col items-center gap-10 min-h-screen w-full justify-center block-zoom"
     >
       <div className="flex flex-col items-center gap-4">
         <div className="flex flex-col items-center gap-3">
@@ -20,16 +20,21 @@ export function Hero() {
         </div>
 
         <div className="flex flex-row gap-3">
-          <Button className="flex flex-row gap-2 font-extrabold bg-gradient-to-r from-gray-950 via-gray-700 to-gray-950 text-white shadow-2xl shadow-gray-50/50 border">
+          <Button className="flex flex-row gap-2 font-extrabold bg-gradient-to-r from-gray-950 via-gray-700 to-gray-950 text-white  border">
             <Github />
             GitHub
           </Button>
 
-          <Button className="flex flex-row gap-2 font-extrabold bg-gradient-to-r from-blue-950 via-blue-700 to-blue-950 text-white shadow-2xl shadow-gray-50/50 border">
+          <Button className="flex flex-row gap-2 font-extrabold bg-gradient-to-r from-blue-950 via-blue-700 to-blue-950 text-white border">
             <Linkedin />
             LinkedIn
           </Button>
         </div>
+
+        <Button className="flex flex-row gap-2 justify-center items-center dark shadow-2xl shadow-gray-50/50 font-medium rounded-3xl">
+          <Download />
+          Download CV
+        </Button>
       </div>
 
       <blockquote className="mt-6 border-l-2 pl-6 italic text-center">

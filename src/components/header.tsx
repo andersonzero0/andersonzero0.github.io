@@ -1,15 +1,19 @@
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Menu, X } from "lucide-react";
+import { CommandIcon, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import { Button } from "./ui/button";
 
-export function Header() {
+interface HeaderProps {
+  setOpenCommand: () => void;
+}
+export function Header({ setOpenCommand }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMediumScreen = useMediaQuery({ query: "(min-width: 768px)" });
 
   return (
-    <header className="absolute w-full z-10 py-4 md:px-10 px-4 bg-white/10 backdrop-blur-lg flex flex-row justify-between items-center">
+    <header className="absolute w-full z-20 py-4 md:px-10 px-4 bg-white/10 backdrop-blur-lg flex flex-row justify-between items-center">
       <div className="flex flex-row gap-4 items-center justify-center">
         <Avatar className="">
           <AvatarImage src="https://github.com/andersonzero0.png" />
@@ -29,10 +33,21 @@ export function Header() {
         } md:flex`}
       >
         <a href="#hero">sobre mim</a>
+        <a href="#experiences">experiências</a>
         <a href="#projects">projetos</a>
-        <a href="">experiências</a>
         <a href="">contato</a>
       </motion.nav>
+      <Button
+        className="flex flex-row gap-2"
+        onClick={() => {
+          setOpenCommand();
+        }}
+      >
+        <div className="flex flex-row justify-center gap-1 items-center bg-zinc-800 px-2 py-1 rounded-sm">
+          <CommandIcon size={16} />K
+        </div>
+        <p>Navegar</p>
+      </Button>
       <button
         className="md:hidden flex flex-col gap-1"
         onClick={() => setIsMenuOpen(!isMenuOpen)}

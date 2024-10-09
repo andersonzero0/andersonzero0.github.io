@@ -30,7 +30,7 @@ export function ProjectCard({ alt = false }: { alt: boolean }) {
           </p>
         </div>
       </div>
-      <div className={`md:w-96 md:block hidden ${alt ? "left" : "right"}-fade`}>
+      <div className={`md:w-92 md:block hidden ${alt ? "left" : "right"}-fade`}>
         <img
           className="w-full rounded-lg"
           src="https://picsum.photos/300/200"
