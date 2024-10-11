@@ -5,7 +5,7 @@ interface ProjectCardProps {
   description: string;
   techStack: string[];
   image: string;
-  link: string;
+  link?: string;
   alt: boolean;
 }
 export function ProjectCard({
@@ -50,11 +50,13 @@ export function ProjectCard({
           <p className="leading-7 [&:not(:first-child)]:mt-1">{description}</p>
         </div>
 
-        <a href={link} target="_blank">
-          <div className="rounded-full flex justify-center items-center">
-            <Github />
-          </div>
-        </a>
+        {link && (
+          <a href={link} target="_blank">
+            <div className="rounded-full flex justify-center items-center">
+              <Github />
+            </div>
+          </a>
+        )}
       </div>
       <div
         className={`md:w-92 md:block hidden ${

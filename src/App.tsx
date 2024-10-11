@@ -23,8 +23,7 @@ const App = () => {
   return (
     <main className="text-white h-screen scroll-smooth bg-[url('./assets/background.png')] bg-center bg-cover w-screen bg-no-repeat overflow-auto">
       <Header />
-      <main className="container m-auto flex flex-col">
-        <p className="text-center font-mono">Em desenvolvimento...</p>
+      <main className="container m-auto flex flex-col gap-36">
         <Hero />
         <Experiences />
         <Projects />

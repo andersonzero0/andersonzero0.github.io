@@ -22,28 +22,44 @@ export function Hero() {
             Desenvolvedor Back-end
           </h2>
         </div>
-        <Button className="flex flex-row gap-2 shadow-2xl shadow-gray-400/50 rounded-3xl bg-gradient-to-r from-transparent to-green-800">
-          <Mail />
-          anderson11viana@gmail.com
-        </Button>
+        <a href="mailto:anderson11viana@gmail.com">
+          <Button className="flex flex-row gap-2 shadow-2xl shadow-gray-400/50 rounded-3xl bg-gradient-to-r from-transparent to-green-800">
+            <Mail />
+            anderson11viana@gmail.com
+          </Button>
+        </a>
 
         <div className="flex flex-row gap-3">
-          <Button className="flex flex-row gap-2 rounded-3xl font-extrabold bg-gradient-to-r from-gray-950 via-gray-700 to-gray-950 text-white  border">
-            <Github />
-            GitHub
-          </Button>
+          <a
+            href="https://github.com/andersonzero0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="flex flex-row gap-2 rounded-3xl font-extrabold bg-gradient-to-r from-gray-950 via-gray-700 to-gray-950 text-white border">
+              <Github />
+              GitHub
+            </Button>
+          </a>
 
-          <Button className="flex flex-row gap-2 rounded-3xl font-extrabold bg-gradient-to-r from-blue-950 via-blue-700 to-blue-950 text-white border">
-            <Linkedin />
-            LinkedIn
-          </Button>
+          <a
+            href="https://www.linkedin.com/in/andersonvianaa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="flex flex-row gap-2 rounded-3xl font-extrabold bg-gradient-to-r from-blue-950 via-blue-700 to-blue-950 text-white border">
+              <Linkedin />
+              LinkedIn
+            </Button>
+          </a>
         </div>
 
         <div className="flex flex-row gap-2">
-          <Button className="flex flex-row gap-2 justify-center items-center dark shadow-2xl shadow-gray-50/50 font-medium rounded-3xl">
-            <Download />
-            Baixar Currículo
-          </Button>
+          <a href="/curriculo.pdf" download>
+            <Button className="flex flex-row gap-2 justify-center items-center dark shadow-2xl shadow-gray-50/50 font-medium rounded-3xl">
+              <Download />
+              Baixar Currículo
+            </Button>
+          </a>
         </div>
       </div>
 

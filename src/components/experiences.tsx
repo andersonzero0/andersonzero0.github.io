@@ -4,7 +4,7 @@ export function Experiences() {
   return (
     <section
       id="experiences"
-      className="flex flex-col scroll-m-14 gap-4 w-full min-h-screen items-center justify-center"
+      className="flex flex-col scroll-m-24 gap-4 w-full min-h-screen items-center justify-center"
     >
       <h2 className="overflow-hidden text-center scroll-m-20 md:text-9xl text-5xl font-extrabold tracking-tight first:mt-0 items-start justify-start bg-gradient-to-b from-gray-500 to-zinc-950 inline-block text-transparent bg-clip-text">
         EXPERIÊNCIAS
@@ -35,18 +35,23 @@ export function Experiences() {
               <ul>PostgreSQL</ul>
               <ul>ReactJS</ul>
               <ul>React-Native</ul>
+              <ul>Docker</ul>
+              <ul>Kafka</ul>
             </li>
           </div>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
-            atque sapiente iusto. Fuga, temporibus vero! Necessitatibus ad rerum
-            asperiores accusantium quaerat, dolor harum praesentium voluptatum
-            inventore. Ex voluptatum aperiam aliquam.
+            Desenvolvimento de um microserviço de Chat Real-time em NestJS
+            usando Socket.io e MongoDB. Um dos requisitos do projeto era que a
+            API deveria ser flexível para o uso de múltiplos sistemas, assim
+            sendo preciso usar um arquitetura que atendesse de forma adequada
+            aos sistemas que consumisse desse microserviço.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste,
-            a soluta sequi nihil veniam esse, illum alias ut expedita nulla
-            dolores nisi quasi totam amet molestiae dicta. Odio, magni.
+            Me foi encarregado o desenvolvimento de um plugin para o sofware de
+            engenharia e arquitetura Autodesk Revit, para a construção desse
+            plugin foi utilizadas as tecnologias: C#, WPF e Revit API. Com o
+            esse desenvolvimento pude demostrar e melhorar minha capacidade de
+            aprendizado rápido e eficaz.
           </p>
         </div>
       </div>

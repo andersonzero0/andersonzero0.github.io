@@ -5,30 +5,72 @@ type Project = {
   description: string;
   techStack: string[];
   image: string;
-  link: string;
+  link?: string;
 };
 export function Projects() {
   const projects: Project[] = [
     {
-      title: "Live Video Streaming API with NestJS",
-      description: "...",
-      techStack: ["Back-end", "NodeJS", "TypeScript", "Redis"],
+      title: "Live Video Streaming API",
+      description:
+        "Criei uma API completa de Live Streaming de vídeo, onde foi usado um servidor RTMP e o protocolo HLS (HTTP Live Streaming). Foi desenvolvida usando o framework NestJS.",
+      techStack: [
+        "Back-end",
+        "NestJS",
+        "TypeScript",
+        "HLS",
+        "RTMP",
+        "SQLite",
+        "TypeORM",
+      ],
       image: "/live.png",
       link: "https://github.com/andersonzero0/live-streaming-nestjs",
     },
     {
+      title: "Chat API Real-time",
+      description:
+        " Desenvolvi essa API com uma arquitetura flexível, onde seja possível que múltiplos sistemas a consumam. Foi usado NestJS, MongoDB, WebSocket, Kafka, Redis, Prisma e entre outras ferramentas.",
+      techStack: ["Back-end", "NestJS", "TypeScript", "Socket.io", "MongoDB"],
+      image: "/chat.png",
+    },
+    {
       title: "Websocket Multiclusters Redis",
-      description: "...",
-      techStack: ["Back-end", "NodeJS", "TypeScript", "Redis"],
+      description:
+        "Este meu repositório hospeda um WebSocket Gateway construído com NestJS. Aproveitando o poder dos WebSockets para comunicação bidirecional em tempo real, este projeto garante conectividade perfeita entre múltiplas instâncias do gateway, funcionando como um servidor unificado.",
+      techStack: [
+        "Back-end",
+        "NestJS",
+        "TypeScript",
+        "NodeJS",
+        "Redis",
+        "Docker",
+        "WebSockets",
+      ],
       image: "/ws-redis.png",
       link: "https://github.com/andersonzero0/websocket-multiclusters-redis",
     },
     {
       title: "NubbleApp",
-      description: "...",
-      techStack: ["Front-end", "React Native", "TypeScript", "Jest"],
+      description:
+        "Desenvolimento completo de um aplicativo de rede social. Construído com React Native e TypeScript, do Curso de React Native do CoffStack.",
+      techStack: ["Front-end", "React Native", "TypeScript"],
       image: "/nubble.png",
       link: "https://github.com/andersonzero0/NubbleApp",
+    },
+    {
+      title: "Ordem de Serviços",
+      description:
+        "Sistema de ordem de serviços para controle de serviços. Desenvolvi o Front-end e o Back-end com React e NestJS.",
+      techStack: [
+        "Front-end",
+        "Back-end",
+        "React",
+        "TypeScript",
+        "NestJS",
+        "Prisma",
+        "PostgreSQL",
+      ],
+      image: "/ordem.png",
+      link: "https://github.com/andersonzero0/ordem-de-servicos",
     },
   ];
 

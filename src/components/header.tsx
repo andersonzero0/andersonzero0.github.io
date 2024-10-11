@@ -8,9 +8,9 @@ export function Header() {
   const isMediumScreen = useMediaQuery({ query: "(min-width: 768px)" });
 
   return (
-    <header className="sticky top-0 w-full min-h-20 z-20 py-4 md:px-10 px-4 bg-white/10 backdrop-blur-2xl flex flex-row justify-between items-center">
+    <header className="sticky select-none top-0 w-full min-h-20 z-20 py-4 md:px-10 px-4 bg-white/10 backdrop-blur-2xl flex flex-row justify-between items-center">
       <div className="flex flex-row gap-4 items-center justify-center">
-        <p className="logo font-extrabold text-2xl font-mono">ANDERSON.DEV</p>
+        <p className="logo font-light text-lg">ANDERSON.DEV</p>
       </div>
       <motion.nav
         initial={{ height: 0, opacity: 0 }}
