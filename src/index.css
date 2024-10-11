@@ -190,7 +190,7 @@
 .block-zoom {
   animation: appear-zoom linear, disappear-zoom linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 10%, exit 0% cover 110%;
+  animation-range: entry 0% cover -30%, exit 0% cover 110%;
 }
 
 .left-fade {
@@ -203,4 +203,8 @@
   animation: appear-fade-right linear, disappear-fade-right linear;
   animation-timeline: view();
   animation-range: entry 0 cover 15%, exit 0 cover 115%;
+}
+
+.transition-bg {
+  transition: background 0.3s ease-in-out;
 }

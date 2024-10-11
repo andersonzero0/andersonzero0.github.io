@@ -1,4 +1,21 @@
-export function ProjectCard({ alt = false }: { alt: boolean }) {
+import { Github } from "lucide-react";
+
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  techStack: string[];
+  image: string;
+  link: string;
+  alt: boolean;
+}
+export function ProjectCard({
+  alt = false,
+  title,
+  image,
+  techStack,
+  description,
+  link,
+}: ProjectCardProps) {
   return (
     <div
       className={`flex ${
@@ -12,28 +29,41 @@ export function ProjectCard({ alt = false }: { alt: boolean }) {
             : "right-fade items-end text-right"
         } z-10`}
       >
-        <div className={`flex flex-col ${alt ? "items-end" : "items-start"}`}>
-          <small className="text-sm font-medium leading-none">
-            Email address
-          </small>
+        <div
+          className={`flex flex-col gap-2 ${alt ? "items-end" : "items-start"}`}
+        >
+          <li
+            className={`flex flex-row ${
+              alt ? "justify-end" : "justify-start"
+            } items-center max-w-2xl flex-wrap gap-2 *:bg-indigo-500/40 *:p-2 *:rounded-3xl *:text-sm *:border *:border-indigo-400`}
+          >
+            {techStack.map((tech) => (
+              <ul key={tech}>{tech}</ul>
+            ))}
+          </li>
           <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-            The Joke Tax
+            {title}
           </h3>
         </div>
 
         <div>
-          <p className="leading-7 [&:not(:first-child)]:mt-1">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-            recusandae quae reprehenderit assumenda, ad eaque animi impedit
-            minima voluptas expedita asperiores. Iure perferendis beatae
-            doloremque sapiente ipsa qui ad quisquam.
-          </p>
+          <p className="leading-7 [&:not(:first-child)]:mt-1">{description}</p>
         </div>
+
+        <a href={link} target="_blank">
+          <div className="rounded-full flex justify-center items-center">
+            <Github />
+          </div>
+        </a>
       </div>
-      <div className={`md:w-92 md:block hidden ${alt ? "left" : "right"}-fade`}>
+      <div
+        className={`md:w-92 md:block hidden ${
+          alt ? "left" : "right"
+        }-fade overflow-hidden rounded-lg`}
+      >
         <img
-          className="w-full rounded-lg"
-          src="https://picsum.photos/300/200"
+          className="w-full rounded-lg transition-transform duration-300 transform hover:scale-110"
+          src={image}
         />
       </div>
     </div>
