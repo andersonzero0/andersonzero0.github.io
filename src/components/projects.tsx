@@ -63,7 +63,7 @@ export function Projects() {
     {
       title: "NubbleApp",
       description:
-        "Desenvolimento completo de um aplicativo de rede social. Construído com React Native e TypeScript, do Curso de React Native do CoffStack.",
+        "Desenvolvimento de um aplicativo completo de rede social. Construído com React Native e TypeScript, do Curso de React Native do CoffStack.",
       techStack: ["Front-end", "React Native", "TypeScript"],
       image: "/nubble.png",
       date: "Mar 2024 - Em andamento",
