@@ -5,6 +5,7 @@ interface ProjectCardProps {
   description: string;
   techStack: string[];
   image: string;
+  date: string;
   link?: string;
   alt: boolean;
 }
@@ -15,12 +16,13 @@ export function ProjectCard({
   techStack,
   description,
   link,
+  date,
 }: ProjectCardProps) {
   return (
     <div
       className={`flex ${
         alt ? "flex-row-reverse" : "flex-row"
-      } flex-wrap justify-center items-center w-full`}
+      } flex-wrap justify-center items-center w-full snap-center snap-always`}
     >
       <div
         className={`md:w-1/2 w-full flex flex-col gap-4 p-4 ${
@@ -44,6 +46,8 @@ export function ProjectCard({
           <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
             {title}
           </h3>
+
+          <div className="text-gray-400">{date}</div>
         </div>
 
         <div>

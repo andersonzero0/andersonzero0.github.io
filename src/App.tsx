@@ -1,4 +1,5 @@
 import { Experiences } from "./components/experiences";
+import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { Hero } from "./components/hero";
 import { Projects } from "./components/projects";
@@ -23,11 +24,12 @@ const App = () => {
   return (
     <main className="text-white h-screen scroll-smooth bg-[url('./assets/background.png')] bg-center bg-cover w-screen bg-no-repeat overflow-auto">
       <Header />
-      <main className="container m-auto flex flex-col gap-36">
+      <main className="container m-auto px-2 flex flex-col gap-36">
         <Hero />
         <Experiences />
         <Projects />
       </main>
+      <Footer />
     </main>
   );
 };
