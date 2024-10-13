@@ -94,7 +94,7 @@ export function Projects() {
       className="flex flex-col gap-4 scroll-m-24 w-full min-h-screen items-center justify-center pb-40"
     >
       <div>
-        <h2 className="overflow-hidden text-center scroll-m-20 md:text-9xl text-4 xl font-extrabold tracking-tight first:mt-0 bg-gray-500 items-start justify-start bg-gradient-to-b from-gray-300 to-zinc-950 inline-block text-transparent bg-clip-text">
+        <h2 className="overflow-hidden text-center scroll-m-20 md:text-9xl text-4xl font-extrabold tracking-tight first:mt-0 bg-gray-500 items-start justify-start bg-gradient-to-b from-gray-300 to-zinc-950 inline-block text-transparent bg-clip-text">
           PROJETOS
         </h2>
       </div>
