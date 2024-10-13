@@ -19,7 +19,7 @@ export function Hero() {
             Anderson Viana
           </h1>
           <h2 className="scroll-m-20 text-center pb-2 text-2xl font-semibold tracking-tight first:mt-0 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
-            Desenvolvedor Back-end
+            Desenvolvedor Fullstack
           </h2>
         </div>
         <a href="mailto:anderson11viana@gmail.com">
