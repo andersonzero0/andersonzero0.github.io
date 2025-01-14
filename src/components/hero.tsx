@@ -1,13 +1,13 @@
 //import { Skills } from "./skills";
 // import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export function Hero() {
   return (
     <section
       id="hero"
-      className="flex flex-col scroll-m-48 py-4 items-center gap-10 min-h-screen w-full justify-start block-zoom"
+      className="flex flex-col scroll-m-48 py-4 items-center gap-10 min-h-screen w-full justify-center block-zoom"
     >
       <div className="flex flex-col items-center gap-4">
         <div className="flex flex-col items-center gap-3">
@@ -22,12 +22,6 @@ export function Hero() {
             Desenvolvedor de Software
           </h2>
         </div>
-        <a href="mailto:anderson11viana@gmail.com">
-          <Button className="flex flex-row gap-2 shadow-2xl shadow-gray-400/50 rounded-3xl bg-gradient-to-r from-transparent to-green-800">
-            <Mail />
-            anderson11viana@gmail.com
-          </Button>
-        </a>
 
         <div className="flex flex-row gap-3">
           <a
