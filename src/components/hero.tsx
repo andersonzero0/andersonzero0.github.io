@@ -1,7 +1,7 @@
-import { Skills } from "./skills";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+//import { Skills } from "./skills";
+// import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
-import { Download, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export function Hero() {
   return (
@@ -11,10 +11,10 @@ export function Hero() {
     >
       <div className="flex flex-col items-center gap-4">
         <div className="flex flex-col items-center gap-3">
-          <Avatar className="w-28 h-28">
+          {/* <Avatar className="w-28 h-28">
             <AvatarImage src="https://github.com/andersonzero0.png" />
             <AvatarFallback>AV</AvatarFallback>
-          </Avatar>
+          </Avatar> */}
           <h1 className="scroll-m-20 text-4xl text-center font-extrabold tracking-tight lg:text-5xl">
             Anderson Viana
           </h1>
@@ -53,17 +53,17 @@ export function Hero() {
           </a>
         </div>
 
-        <div className="flex flex-row gap-2">
+        {/* <div className="flex flex-row gap-2">
           <a href="/curriculo.pdf" download>
-            <Button className="flex flex-row gap-2 justify-center items-center dark shadow-2xl shadow-gray-50/50 font-medium rounded-3xl">
+            <Button className="flex flex-row gap-2 justify-center items-center dark font-medium rounded-3xl backdrop-blur-3xl">
               <Download />
               Baixar Currículo
             </Button>
           </a>
-        </div>
+        </div> */}
       </div>
 
-      <Skills />
+      {/* <Skills /> */}
     </section>
   );
 }
