@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        retro: ['Press Start 2P', 'sans-serif'],
+      },
       backgroundImage: {
         "radial-red-white":
           "radial-gradient(circle, rgba(255,0,0,1) -80%, rgba(255,255,255,0) 60%)",

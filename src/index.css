@@ -1,12 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: "Manrope", sans-serif;
-    color: white;
-  }
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -62,150 +61,16 @@
   }
 }
 
-@keyframes moveAround {
-  0% {
-    transform: translate(10vw, 5vh);
-  }
-  20% {
-    transform: translate(50vw, 25vh);
-  }
-  40% {
-    transform: translate(80vw, 50vh);
-  }
-  60% {
-    transform: translate(50vw, 75vh);
-  }
-  80% {
-    transform: translate(0, 100vh);
-  }
-  100% {
-    transform: translate(10vw, 0);
-  }
+.font-plex-mono {
+  font-family: 'IBM Plex Mono', monospace;
 }
 
-@keyframes moveAround2 {
-  0% {
-    transform: translate(90vw, 100vh);
-  }
-  20% {
-    transform: translate(10vw, 90vh);
-  }
-  40% {
-    transform: translate(10vw, 10vh);
-  }
-  60% {
-    transform: translate(90vw, 20vh);
-  }
-  80% {
-    transform: translate(65vw, 50vh);
-  }
-  100% {
-    transform: translate(90vw, 100vh);
-  }
+.font-retro {
+  font-family: 'Press Start 2P', sans-serif;
 }
 
-.moving-div2 {
-  animation: moveAround2 60s linear infinite;
-}
-
-.moving-div {
-  animation: moveAround 60s linear infinite;
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@keyframes appear-fade {
-  from {
-    opacity: 0;
-    transform: translateX(-200px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes disappear-fade {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-200px);
-  }
-}
-
-@keyframes appear-fade-right {
-  from {
-    opacity: 0;
-    transform: translateX(200px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes disappear-fade-right {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(200px);
-  }
-}
-
-@keyframes appear-zoom {
-  from {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes disappear-zoom {
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-}
-
-.block-zoom {
-  animation: appear-zoom linear, disappear-zoom linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%, exit 0% cover 140%;
-}
-
-.left-fade {
-  animation: appear-fade 0.6s linear 0.3s, disappear-fade 0.6s linear 0.3s;
-  animation-timeline: view();
-  animation-range: entry -100% cover 40%, exit 0 cover 140%;
-}
-
-.right-fade {
-  animation: appear-fade-right 0.6s linear 0.3s,
-    disappear-fade-right 0.6s linear 0.3s;
-  animation-timeline: view();
-  animation-range: entry -100% cover 40%, exit 0 cover 140%;
-}
-
-.transition-bg {
-  transition: background 0.3s ease-in-out;
+.terminal-effect {
+  position: relative;
+  image-rendering: pixelated;
+  filter: grayscale(0.5) brightness(1.0) contrast(2) hue-rotate(10deg); 
 }
