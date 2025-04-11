@@ -61,12 +61,8 @@
   }
 }
 
-.font-plex-mono {
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-.font-retro {
-  font-family: 'Press Start 2P', sans-serif;
+* {
+  font-family: "Ubuntu", sans-serif;
 }
 
 .terminal-effect {

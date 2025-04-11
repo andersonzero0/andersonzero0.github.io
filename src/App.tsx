@@ -1,15 +1,17 @@
-import { AboutMe } from "./components/about-me";
-import { Experiences } from "./components/experiences";
+
 import { Header } from "./components/header";
+import { Hero } from "./components/hero";
+
 
 
 const App = () => {
 
   return (
-    <main className="container h-screen m-auto p-2 dark font-plex-mono flex flex-col gap-6 overflow-auto">
+    <main className="m-auto flex flex-col gap-3">
       <Header />
-      <AboutMe />
-      <Experiences />
+      <section className="container m-auto">
+        <Hero/>
+      </section>
     </main>
   );
 };

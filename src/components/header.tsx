@@ -1,36 +1,32 @@
-import { PrinterIcon } from "lucide-react";
+import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 
 export function Header() {
-
-  function printPage() {
-    window.print();
-  }
-  
   return (
-    <header className="w-full flex flex-row min-h-16 items-center justify-between flex-wrap gap-4">
-        <div className="h-full flex flex-row items-center gap-4">
-          <img src="http://github.com/andersonzero0.png" className="rounded-2xl w-16 h-16" />
+    <header className="bg-[#416447] p-6 flex flex-row justify-between">
+      <nav>
+        <ul className="flex flex-row justify-center items-center gap-10">
+          <li>
+            <a href="#exp" className="text-white">
+              Experiências
+            </a>
+          </li>
+          <li>
+            <a href="#projects" className="text-white">
+              Projetos
+            </a>
+          </li>
+          <li>
+            <a href="#blog" className="text-white">
+              Blog
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-          <div>
-            <h1 className="text-xl font-bold">Anderson Viana</h1>
-            <p className="font-plex-mono">Desenvolvedor de Software</p>
-            <p>
-              ⭐️⭐️⭐️⭐️⭐️
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-row items-center gap-6">
-          <a href="">
-            <img className="w-6" src="./github.svg" />
-          </a>
-          <a href="">
-            <img className="w-6" src="./linkedin.png" />
-          </a>
-          <button onClick={printPage} className="flex justify-center items-center">
-            <PrinterIcon size={24}/>
-          </button>
-        </div>
+      <div className="flex flex-row items-center gap-3 justify-center">
+        <GithubLogo size={32} color="#fff" />
+        <LinkedinLogo size={32} color="#fff" />
+      </div>
     </header>
   )
 }
