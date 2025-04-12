@@ -1,4 +1,4 @@
-import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { GithubLogo, LinkedinLogo } from '@phosphor-icons/react';
 
 export function Header() {
   return (
@@ -24,9 +24,9 @@ export function Header() {
       </nav>
 
       <div className="flex flex-row items-center gap-3 justify-center">
-        <GithubLogo size={32} color="#fff" />
-        <LinkedinLogo size={32} color="#fff" />
+        <GithubLogo size={32} color="#fff" weight="fill" />
+        <LinkedinLogo size={32} color="#fff" weight="fill" />
       </div>
     </header>
-  )
+  );
 }
