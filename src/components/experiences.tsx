@@ -65,29 +65,70 @@ function ExperienceItem({ experience, isLast = false }: ExperienceItemProps) {
 
 const experiencesData: Experience[] = [
   {
-    version: "v3.0",
+    version: "v5.0",
     company: "Teddy Open Finance",
-    period: "Apr 2025 - Present",
-    role: "Software Engineer - Backend",
+    period: "Nov 2025 - Atual",
+    role: "Engenheiro de Software Backend Junior II",
     description:
-      "Backend developer at Teddy Open Finance working on White Label platform focused on custom financial solutions. Contributed to backend migration between versions, creating scripts and data migration orchestrator.",
+      "Atuacao no backend da plataforma White Label para solucoes financeiras personalizadas, com foco em sustentacao, evolucao continua e alta confiabilidade.",
     achievements: [
-      "Implemented multi-tenant propagation feature with AWS SQS and DynamoDB",
-      "Ensured auditability and security across platform",
-      "Participated in continuous platform evolution and optimization",
+      "Contribuicao na migracao de backend v1 para v2 com mapeamento de tabelas e scripts de migracao",
+      "Desenvolvimento de orquestrador para ordenacao de migracao por dependencias",
+      "Implementacao de propagacao multi-tenant com AWS SQS e DynamoDB",
+      "Criacao de historico de execucao para auditabilidade e seguranca",
+    ],
+  },
+  {
+    version: "v4.0",
+    company: "Teddy Open Finance",
+    period: "Abr 2025 - Nov 2025",
+    role: "Engenheiro de Software Backend Junior I",
+    description:
+      "Inicio da trajetoria na Teddy com desenvolvimento backend de APIs REST e operacoes criticas da plataforma financeira.",
+    achievements: [
+      "Melhorias continuas de performance e estabilidade da plataforma",
+      "Atuacao em AWS S3, SQS e DynamoDB para operacoes assicronas",
+      "Suporte a entregas multi-tenant com foco em escalabilidade",
+    ],
+  },
+  {
+    version: "v3.0",
+    company: "We Stand",
+    period: "Set 2024 - Abr 2025",
+    role: "Desenvolvedor Backend",
+    description:
+      "Desenvolvimento da plataforma para negociacao e contratacao de servicos de construcao de stands em eventos.",
+    achievements: [
+      "Implementacao de backend com NestJS, PostgreSQL e TypeORM",
+      "Suporte ao fluxo de comunicacao entre fornecedores e clientes",
+      "Base para gerenciamento de contratos e pagamentos",
     ],
   },
   {
     version: "v2.0",
-    company: "StageTree",
-    period: "Aug 2023 - Apr 2025",
-    role: "Full Stack Developer",
+    company: "Qualitare",
+    period: "Set 2024 - Abr 2025",
+    role: "Desenvolvedor Backend",
     description:
-      "Developed real-time Chat microservice with NestJS using Socket.io and MongoDB. Built flexible API architecture for multiple system consumption.",
+      "Criacao de sistema de gestao para haras, incluindo controle financeiro e operacao diaria.",
     achievements: [
-      "Created plugin for Autodesk Revit using C#, WPF and Revit API",
-      "Demonstrated rapid learning capability across different tech stacks",
-      "Implemented scalable microservices architecture",
+      "Cadastro e acompanhamento de animais, treinadores e competicoes",
+      "Estruturacao de modulos de gestao financeira",
+      "Backend robusto com NestJS, PostgreSQL e TypeORM",
+    ],
+  },
+  {
+    version: "v1.0",
+    company: "StageTree",
+    period: "Ago 2023 - Abr 2025",
+    role: "Desenvolvedor Fullstack e Estagiario",
+    description:
+      "Desenvolvimento de microservico de chat real-time e de sistemas de gestao para diferentes segmentos, participando de todo o ciclo de desenvolvimento.",
+    achievements: [
+      "Reducao de 40% no tempo de entrega de mensagens com WebSockets e Redis",
+      "Integracao com Kafka para processamento assincrono e resiliente",
+      "Automacao de 80% de processos manuais no sistema de gestao para haras",
+      "Melhoria de 30% no tempo de fechamento de contratos na plataforma de stands",
     ],
   },
 ];

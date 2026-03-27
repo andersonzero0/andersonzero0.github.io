@@ -4,7 +4,7 @@ interface StatusBadgeProps {
 }
 
 export const StatusBadge = ({
-  text = "Available for freelance",
+  text = "Atualmente na Teddy Open Finance",
   className = "",
 }: StatusBadgeProps) => {
   return (

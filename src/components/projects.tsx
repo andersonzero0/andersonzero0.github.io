@@ -13,40 +13,37 @@ type Project = {
 export function Projects() {
   const projects: Project[] = [
     {
-      prefix: "sys/streaming",
-      title: "Live Streaming API",
+      prefix: "platform/finance",
+      title: "Migracao Backend v1 -> v2",
       description:
-        "Complete Live Video Streaming API built with RTMP server and HLS (HTTP Live Streaming) protocol. Developed using NestJS framework for high-performance real-time video delivery.",
-      year: "2024",
-      tags: ["NestJS", "TypeScript", "HLS", "RTMP"],
-      link: "https://github.com/andersonzero0/live-streaming-nestjs",
+        "Migracao de dados entre versoes de backend com mapeamento de tabelas, scripts de migracao e orquestrador baseado em dependencias para reduzir risco operacional.",
+      year: "2025",
+      tags: ["NestJS", "PostgreSQL", "TypeORM", "API REST"],
+    },
+    {
+      prefix: "tenant/propagation",
+      title: "Propagacao Multi-Tenant",
+      description:
+        "Funcionalidade de replicacao de dados entre tenants com AWS SQS e DynamoDB, incluindo historico de execucao para auditabilidade e seguranca do processo.",
+      year: "2025",
+      tags: ["NestJS", "AWS SQS", "DynamoDB", "AWS"],
     },
     {
       prefix: "data/realtime",
-      title: "Chat API Real-time",
+      title: "Chat Real-time Microservice",
       description:
-        "Flexible architecture real-time chat API designed for multi-system consumption. Built with NestJS, MongoDB, WebSocket, Kafka, Redis, and Prisma for scalable messaging.",
+        "Servico de chat com milhares de conexoes simultaneas, baixa latencia e alta disponibilidade com NestJS, Socket.io, Redis, MongoDB, Kafka e Prisma.",
       year: "2024",
-      tags: ["NestJS", "Socket.io", "MongoDB", "Kafka"],
-      linkLabel: "Case Study",
-    },
-    {
-      prefix: "infra/gateway",
-      title: "WebSocket Multiclusters",
-      description:
-        "WebSocket Gateway with NestJS leveraging bidirectional real-time communication. Ensures seamless connectivity between multiple gateway instances using Redis as a unified server.",
-      year: "2024",
-      tags: ["WebSocket", "Redis", "Docker", "TypeScript"],
+      tags: ["WebSocket", "Redis", "MongoDB", "Kafka"],
       link: "https://github.com/andersonzero0/websocket-multiclusters-redis",
     },
     {
-      prefix: "app/mobile",
-      title: "NubbleApp",
+      prefix: "platform/operations",
+      title: "Plataforma de Stands",
       description:
-        "Complete social network mobile application. Built with React Native and TypeScript following modern mobile development best practices.",
+        "Plataforma fullstack para negociacao e contratacao de servicos de construcao de stands, com foco em comunicacao entre partes, contratos e pagamentos.",
       year: "2024",
-      tags: ["React Native", "TypeScript", "Mobile"],
-      link: "https://github.com/andersonzero0/NubbleApp",
+      tags: ["NestJS", "Angular", "PostgreSQL", "TypeORM"],
     },
   ];
 

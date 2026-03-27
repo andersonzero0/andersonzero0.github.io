@@ -23,8 +23,8 @@ export function CoreStack() {
           <div className="flex flex-wrap gap-2">
             <TechTag>TypeScript</TechTag>
             <TechTag>JavaScript</TechTag>
-            <TechTag>Python</TechTag>
-            <TechTag>Java</TechTag>
+            <TechTag>SQL</TechTag>
+            <TechTag>NoSQL</TechTag>
           </div>
         </div>
 
@@ -34,10 +34,12 @@ export function CoreStack() {
             Frameworks
           </h3>
           <div className="flex flex-wrap gap-2">
-            <TechTag>React</TechTag>
-            <TechTag>Next.js</TechTag>
+            <TechTag>NestJS</TechTag>
             <TechTag>Node.js</TechTag>
-            <TechTag>Express</TechTag>
+            <TechTag>React</TechTag>
+            <TechTag>Angular</TechTag>
+            <TechTag>Next.js</TechTag>
+            <TechTag>REST API</TechTag>
           </div>
         </div>
 
@@ -48,9 +50,10 @@ export function CoreStack() {
           </h3>
           <div className="flex flex-wrap gap-2">
             <TechTag>PostgreSQL</TechTag>
+            <TechTag>MySQL</TechTag>
             <TechTag>MongoDB</TechTag>
             <TechTag>Redis</TechTag>
-            <TechTag>MySQL</TechTag>
+            <TechTag>DynamoDB</TechTag>
           </div>
         </div>
 
@@ -61,8 +64,11 @@ export function CoreStack() {
           </h3>
           <div className="flex flex-wrap gap-2">
             <TechTag>Docker</TechTag>
-            <TechTag>Kubernetes</TechTag>
             <TechTag>AWS</TechTag>
+            <TechTag>EC2</TechTag>
+            <TechTag>AWS SQS</TechTag>
+            <TechTag>Kafka</TechTag>
+            <TechTag>CI/CD</TechTag>
             <TechTag>Git</TechTag>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { Hero } from "./components/hero";
 import { Projects } from "./components/projects";
+import { GithubActivity } from "./components/github-activity";
 import DotGrid from "./components/DotGrid";
 
 const App = () => {
@@ -36,6 +37,9 @@ const App = () => {
           </section>
           <section id="projects">
             <Projects />
+          </section>
+          <section id="activity">
+            <GithubActivity />
           </section>
           <section id="experience">
             <Experiences />
