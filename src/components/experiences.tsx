@@ -1,71 +1,63 @@
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-
 interface Experience {
-  companyName: string;
-  companyLogo: string;
-  companyInitials: string;
+  version: string;
+  company: string;
   period: string;
   role: string;
-  technologies: string[];
-  descriptions: string[];
-  colorTheme: "orange" | "green";
+  description: string;
+  achievements: string[];
 }
 
-interface ExperienceCardProps {
+interface ExperienceItemProps {
   experience: Experience;
+  isLast?: boolean;
 }
 
-function ExperienceCard({ experience }: ExperienceCardProps) {
-  const colorClasses = {
-    orange: {
-      gradient: "from-zinc-900/95 from-20% via-orange-800/95 to-zinc-900/95 to-80%",
-      badgeBg: "bg-orange-900",
-      badgeBorder: "border-orange-400",
-    },
-    green: {
-      gradient: "from-zinc-900/95 from-20% via-green-800/95 to-zinc-900/95 to-80%",
-      badgeBg: "bg-green-900",
-      badgeBorder: "border-green-400",
-    },
-  };
-
-  const theme = colorClasses[experience.colorTheme];
-
+function ExperienceItem({ experience, isLast = false }: ExperienceItemProps) {
   return (
-    <div
-      className={`w-full z-10 bg-gradient-to-r ${theme.gradient} p-4 flex flex-col gap-2 rounded-lg block-zoom`}
-    >
-      <div className="w-full flex flex-row items-center justify-between">
-        <div className="flex flex-row gap-2 items-center">
-          <Avatar>
-            <AvatarImage src={experience.companyLogo} />
-            <AvatarFallback>{experience.companyInitials}</AvatarFallback>
-          </Avatar>
-          <h2 className="scroll-m-20 text-center text-lg font-semibold tracking-tight first:mt-0 inline-block">
-            {experience.companyName}
-          </h2>
-        </div>
-        <div>{experience.period}</div>
+    <div className={`relative pl-12 ${!isLast ? "pb-16" : "pb-0"}`}>
+      {/* Timeline Dot */}
+      <div className="absolute left-0 top-1.5 w-6 h-6 bg-background border-2 border-primary rounded-full flex items-center justify-center">
+        <div className="w-2 h-2 bg-primary rounded-full" />
       </div>
 
-      <div className="flex flex-col gap-2">
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">{experience.role}</h3>
+      {/* Content */}
+      <div className="space-y-3">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+          <div className="space-y-1">
+            <div className="flex items-center gap-3">
+              <span className="font-label text-xs text-primary uppercase tracking-[0.3em]">
+                {experience.version}
+              </span>
+              <span className="text-xs font-mono text-on-surface-variant">
+                {experience.period}
+              </span>
+            </div>
+            <h3 className="text-2xl font-headline font-bold uppercase tracking-tight">
+              {experience.company}
+            </h3>
+            <p className="text-sm font-label text-on-surface-variant uppercase tracking-wide">
+              {experience.role}
+            </p>
+          </div>
+        </div>
 
-          <ul className="flex flex-row flex-wrap gap-2">
-            {experience.technologies.map((tech, index) => (
-              <li
-                key={index}
-                className={`${theme.badgeBg} ${theme.badgeBorder} p-2 rounded-3xl text-sm border`}
-              >
-                {tech}
+        {/* Description */}
+        <p className="text-on-surface-variant leading-relaxed">
+          {experience.description}
+        </p>
+
+        {/* Achievements */}
+        {experience.achievements.length > 0 && (
+          <ul className="space-y-2 text-sm text-on-surface-variant">
+            {experience.achievements.map((achievement, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <span className="text-primary mt-1">▸</span>
+                <span>{achievement}</span>
               </li>
             ))}
           </ul>
-        </div>
-        {experience.descriptions.map((description, index) => (
-          <p key={index}>{description}</p>
-        ))}
+        )}
       </div>
     </div>
   );
@@ -73,67 +65,57 @@ function ExperienceCard({ experience }: ExperienceCardProps) {
 
 const experiencesData: Experience[] = [
   {
-    companyName: "Teddy Open Finance",
-    companyLogo:
-      "https://liqi-tokens-profiles-account-documents-prd.s3.amazonaws.com/public/logos/1702d790-cdf8-4e7b-983f-2b65e18c37f7.png",
-    companyInitials: "TD",
-    period: "Abr 2025 - Atual",
-    role: "Engenheiro de Software - Backend",
-    technologies: [
-      "NestJS",
-      "NodeJS",
-      "Microservices",
-      "Redis",
-      "PostgreSQL",
-      "Docker",
-      "AWS",
-      "AWS SQS",
-      "AWS DynamoDB",
+    version: "v3.0",
+    company: "Teddy Open Finance",
+    period: "Apr 2025 - Present",
+    role: "Software Engineer - Backend",
+    description:
+      "Backend developer at Teddy Open Finance working on White Label platform focused on custom financial solutions. Contributed to backend migration between versions, creating scripts and data migration orchestrator.",
+    achievements: [
+      "Implemented multi-tenant propagation feature with AWS SQS and DynamoDB",
+      "Ensured auditability and security across platform",
+      "Participated in continuous platform evolution and optimization",
     ],
-    descriptions: [
-      "Atuo como desenvolvedor backend na Teddy Open Finance, trabalhando na plataforma White Label com foco em soluções financeiras personalizadas. Contribuí para a migração do backend entre versões, criando scripts e um orquestrador de migração de dados. Implementei uma feature de propagação multi-tenant com AWS SQS e DynamoDB, garantindo auditabilidade e segurança.",
-      "Além disso, participo da sustentação e evolução contínua da plataforma, otimizando performance e assegurando sua estabilidade.",
-    ],
-    colorTheme: "orange",
   },
   {
-    companyName: "StageTree",
-    companyLogo: "https://github.com/stagetreedevs.png",
-    companyInitials: "ST",
-    period: "Ago 2023 - Abr 2025",
-    role: "Desenvolvedor Full Stack",
-    technologies: [
-      "NestJS",
-      "NodeJS",
-      "MongoDB",
-      "Redis",
-      "PostgreSQL",
-      "ReactJS",
-      "React-Native",
-      "Docker",
-      "Kafka",
+    version: "v2.0",
+    company: "StageTree",
+    period: "Aug 2023 - Apr 2025",
+    role: "Full Stack Developer",
+    description:
+      "Developed real-time Chat microservice with NestJS using Socket.io and MongoDB. Built flexible API architecture for multiple system consumption.",
+    achievements: [
+      "Created plugin for Autodesk Revit using C#, WPF and Revit API",
+      "Demonstrated rapid learning capability across different tech stacks",
+      "Implemented scalable microservices architecture",
     ],
-    descriptions: [
-      "Desenvolvimento de um microserviço de Chat Real-time em NestJS usando Socket.io e MongoDB. Um dos requisitos do projeto era que a API deveria ser flexível para o uso de múltiplos sistemas, assim sendo preciso usar um arquitetura que atendesse de forma adequada aos sistemas que consumisse desse microserviço.",
-      "Me foi encarregado o desenvolvimento de um plugin para o sofware de engenharia e arquitetura Autodesk Revit, para a construção desse plugin foi utilizadas as tecnologias: C#, WPF e Revit API. Com o esse desenvolvimento pude demostrar e melhorar minha capacidade de aprendizado rápido e eficaz.",
-    ],
-    colorTheme: "green",
   },
 ];
 
 export function Experiences() {
   return (
-    <section
-      id="experiences"
-      className="flex flex-col md:scroll-m-0 scroll-m-24 gap-4 w-full min-h-screen items-center justify-center"
-    >
-      <h2 className="overflow-hidden text-center scroll-m-20 md:text-9xl text-4xl font-extrabold tracking-tight first:mt-0 items-start justify-start bg-gradient-to-b from-gray-300 to-zinc-950 inline-block text-transparent bg-clip-text">
-        EXPERIÊNCIAS
-      </h2>
+    <div className="space-y-12">
+      {/* Section Header */}
+      <div className="flex justify-between items-end border-b border-outline-variant/20 pb-4">
+        <h2 className="text-4xl font-headline font-bold uppercase tracking-tighter">
+          Career Changelog
+        </h2>
+        <span className="font-label text-xs text-on-surface-variant uppercase tracking-[0.2em]">
+          0x03 // History
+        </span>
+      </div>
 
-      {experiencesData.map((experience, index) => (
-        <ExperienceCard key={index} experience={experience} />
-      ))}
-    </section>
+      {/* Timeline */}
+      <div className="space-y-0 relative before:absolute before:left-[11px] before:top-4 before:bottom-4 before:w-px before:bg-outline-variant/20">
+        {experiencesData.map((experience, index) => (
+          <ExperienceItem
+            key={index}
+            experience={experience}
+            isLast={index === experiencesData.length - 1}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
+

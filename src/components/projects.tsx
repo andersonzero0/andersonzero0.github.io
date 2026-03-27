@@ -1,108 +1,74 @@
 import { ProjectCard } from "./project-card";
 
 type Project = {
+  prefix: string;
   title: string;
   description: string;
-  techStack: string[];
-  image: string;
-  date: string;
+  year: string;
+  tags: string[];
   link?: string;
+  linkLabel?: string;
 };
+
 export function Projects() {
   const projects: Project[] = [
     {
-      title: "Live Video Streaming API",
+      prefix: "sys/streaming",
+      title: "Live Streaming API",
       description:
-        "Criei uma API completa de Live Streaming de vídeo, onde foi usado um servidor RTMP e o protocolo HLS (HTTP Live Streaming). Foi desenvolvida usando o framework NestJS.",
-      techStack: [
-        "Back-end",
-        "NestJS",
-        "TypeScript",
-        "HLS",
-        "RTMP",
-        "SQLite",
-        "TypeORM",
-      ],
-      date: "Set 2024",
-      image: "/live.png",
+        "Complete Live Video Streaming API built with RTMP server and HLS (HTTP Live Streaming) protocol. Developed using NestJS framework for high-performance real-time video delivery.",
+      year: "2024",
+      tags: ["NestJS", "TypeScript", "HLS", "RTMP"],
       link: "https://github.com/andersonzero0/live-streaming-nestjs",
     },
     {
+      prefix: "data/realtime",
       title: "Chat API Real-time",
       description:
-        " Desenvolvi essa API com uma arquitetura flexível, onde seja possível que múltiplos sistemas a consumam. Foi usado NestJS, MongoDB, WebSocket, Kafka, Redis, Prisma e entre outras ferramentas.",
-      techStack: [
-        "Back-end",
-        "NestJS",
-        "TypeScript",
-        "Socket.io",
-        "MongoDB",
-        "Redis",
-        "Kafka",
-      ],
-      date: "Jul 2024 - Set 2024",
-      image: "/chat.png",
+        "Flexible architecture real-time chat API designed for multi-system consumption. Built with NestJS, MongoDB, WebSocket, Kafka, Redis, and Prisma for scalable messaging.",
+      year: "2024",
+      tags: ["NestJS", "Socket.io", "MongoDB", "Kafka"],
+      linkLabel: "Case Study",
     },
     {
-      title: "Websocket Multiclusters Redis",
+      prefix: "infra/gateway",
+      title: "WebSocket Multiclusters",
       description:
-        "Este meu repositório hospeda um WebSocket Gateway construído com NestJS. Aproveitando o poder dos WebSockets para comunicação bidirecional em tempo real, este projeto garante conectividade perfeita entre múltiplas instâncias do gateway, funcionando como um servidor unificado.",
-      techStack: [
-        "Back-end",
-        "NestJS",
-        "TypeScript",
-        "NodeJS",
-        "Redis",
-        "Docker",
-        "WebSockets",
-      ],
-      image: "/ws-redis.png",
-      date: "Ago 2024",
+        "WebSocket Gateway with NestJS leveraging bidirectional real-time communication. Ensures seamless connectivity between multiple gateway instances using Redis as a unified server.",
+      year: "2024",
+      tags: ["WebSocket", "Redis", "Docker", "TypeScript"],
       link: "https://github.com/andersonzero0/websocket-multiclusters-redis",
     },
     {
+      prefix: "app/mobile",
       title: "NubbleApp",
       description:
-        "Desenvolvimento de um aplicativo completo de rede social. Construído com React Native e TypeScript, do Curso de React Native do CoffStack.",
-      techStack: ["Front-end", "React Native", "TypeScript"],
-      image: "/nubble.png",
-      date: "Mar 2024 - Em andamento",
+        "Complete social network mobile application. Built with React Native and TypeScript following modern mobile development best practices.",
+      year: "2024",
+      tags: ["React Native", "TypeScript", "Mobile"],
       link: "https://github.com/andersonzero0/NubbleApp",
-    },
-    {
-      title: "Ordem de Serviços",
-      description:
-        "Sistema de ordem de serviços para controle de serviços. Desenvolvi o Front-end e o Back-end com React e NestJS.",
-      techStack: [
-        "Front-end",
-        "Back-end",
-        "React",
-        "TypeScript",
-        "NestJS",
-        "Prisma",
-        "PostgreSQL",
-      ],
-      date: "Set 2023 - Out 2023",
-      image: "/ordem.png",
-      link: "https://github.com/andersonzero0/ordem-de-servicos",
     },
   ];
 
   return (
-    <section
-      id="projects"
-      className="flex flex-col gap-4 scroll-m-24 w-full min-h-screen items-center justify-center pb-40"
-    >
-      <div>
-        <h2 className="overflow-hidden text-center scroll-m-20 md:text-9xl text-4xl font-extrabold tracking-tight first:mt-0 bg-gray-500 items-start justify-start bg-gradient-to-b from-gray-300 to-zinc-950 inline-block text-transparent bg-clip-text">
-          PROJETOS
+    <div className="space-y-12">
+      {/* Section Header */}
+      <div className="flex justify-between items-end border-b border-outline-variant/20 pb-4">
+        <h2 className="text-4xl font-headline font-bold uppercase tracking-tighter">
+          Selected Builds
         </h2>
+        <span className="font-label text-xs text-on-surface-variant uppercase tracking-[0.2em]">
+          0x02 // Output
+        </span>
       </div>
-      <div className="flex flex-col justify-center snap-y snap-mandatory items-center gap-4">
+
+      {/* Projects Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
-          <ProjectCard key={index} alt={index % 2 == 0} {...project} />
+          <ProjectCard key={index} {...project} />
         ))}
       </div>
-    </section>
+    </div>
   );
 }
+

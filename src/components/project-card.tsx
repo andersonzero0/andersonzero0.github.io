@@ -1,77 +1,73 @@
-import { Github } from "lucide-react";
+import { ExternalLink, ArrowUpRight } from "lucide-react";
+import { TechTagOutline } from "./tech-tag";
 
 interface ProjectCardProps {
+  prefix: string;
   title: string;
   description: string;
-  techStack: string[];
-  image: string;
-  date: string;
+  year: string;
+  tags: string[];
   link?: string;
-  alt: boolean;
+  linkLabel?: string;
 }
+
 export function ProjectCard({
-  alt = false,
+  prefix,
   title,
-  image,
-  techStack,
   description,
+  year,
+  tags,
   link,
-  date,
+  linkLabel = "Source Code",
 }: ProjectCardProps) {
   return (
-    <div
-      className={`flex ${
-        alt ? "flex-row-reverse" : "flex-row"
-      } flex-wrap justify-center items-center w-full snap-center snap-always`}
-    >
-      <div
-        className={`md:w-1/2 w-full flex flex-col gap-4 p-4 ${
-          !alt
-            ? "left-fade items-start text-left"
-            : "right-fade items-end text-right"
-        } z-10`}
-      >
-        <div
-          className={`flex flex-col gap-2 ${alt ? "items-end" : "items-start"}`}
-        >
-          <li
-            className={`flex flex-row ${
-              alt ? "justify-end" : "justify-start"
-            } items-center max-w-2xl flex-wrap gap-2 *:bg-indigo-500/40 *:p-2 *:rounded-3xl *:text-sm *:border *:border-indigo-400`}
-          >
-            {techStack.map((tech) => (
-              <ul key={tech}>{tech}</ul>
-            ))}
-          </li>
-          <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+    <div className="group relative bg-surface-container p-8 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
+      {/* Header */}
+      <div className="flex justify-between items-start mb-6">
+        <div className="space-y-1">
+          <span className="font-label text-[10px] text-primary uppercase tracking-[0.3em]">
+            {prefix}
+          </span>
+          <h3 className="text-2xl font-headline font-bold uppercase tracking-tight group-hover:text-primary transition-colors">
             {title}
           </h3>
-
-          <div className="text-gray-400">{date}</div>
         </div>
-
-        <div>
-          <p className="leading-7 [&:not(:first-child)]:mt-1">{description}</p>
-        </div>
-
-        {link && (
-          <a href={link} target="_blank">
-            <div className="rounded-full flex justify-center items-center">
-              <Github />
-            </div>
-          </a>
-        )}
+        <span className="text-xs font-mono text-on-surface-variant">{year}</span>
       </div>
-      <div
-        className={`md:w-92 md:block hidden ${
-          alt ? "left" : "right"
-        }-fade overflow-hidden rounded-lg`}
-      >
-        <img
-          className="w-full rounded-lg transition-transform duration-300 transform hover:scale-110"
-          src={image}
+
+      {/* Description */}
+      <p className="text-on-surface-variant mb-8 line-clamp-3">{description}</p>
+
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2 mb-8">
+        {tags.map((tag) => (
+          <TechTagOutline key={tag}>{tag}</TechTagOutline>
+        ))}
+      </div>
+
+      {/* Footer */}
+      <div className="flex justify-between items-center pt-6 border-t border-outline-variant/10">
+        {link ? (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-xs font-label uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors"
+          >
+            <ExternalLink size={14} />
+            {linkLabel}
+          </a>
+        ) : (
+          <span className="text-xs font-label uppercase tracking-widest text-on-surface-variant/50">
+            Coming Soon
+          </span>
+        )}
+        <ArrowUpRight
+          size={20}
+          className="text-primary opacity-0 group-hover:opacity-100 transition-opacity"
         />
       </div>
     </div>
   );
 }
+

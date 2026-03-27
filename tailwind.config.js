@@ -4,56 +4,110 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "radial-red-white":
-          "radial-gradient(circle, rgba(255,0,0,1) -80%, rgba(255,255,255,0) 60%)",
-      },
+      // Stitch Design System - Border Radius
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        DEFAULT: "0.25rem", // 4px - Sharp, engineered feel
+        sm: "0.125rem", // 2px
+        lg: "0.5rem", // 8px
+        xl: "0.75rem", // 12px
+        full: "9999px",
       },
+      // Stitch Design System - Colors
       colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
+        // Surface Hierarchy
+        background: "#0e0e0e",
+        surface: "#0e0e0e",
+        "surface-dim": "#0e0e0e",
+        "surface-bright": "#2c2c2c",
+        "surface-container-lowest": "#000000",
+        "surface-container-low": "#131313",
+        "surface-container": "#1a1919",
+        "surface-container-high": "#201f1f",
+        "surface-container-highest": "#262626",
+        "surface-variant": "#262626",
+        "surface-tint": "#a1ffc1",
+
+        // Primary Colors
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#a1ffc1",
+          dim: "#00ec8d",
+          container: "#00fc97",
+          fixed: "#00fc97",
+          "fixed-dim": "#00ec8d",
         },
+        "on-primary": "#006439",
+        "on-primary-container": "#005b33",
+        "on-primary-fixed": "#004626",
+        "on-primary-fixed-variant": "#00653a",
+
+        // Secondary Colors
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#63f6bf",
+          dim: "#53e7b1",
+          container: "#006c4e",
+          fixed: "#63f6bf",
+          "fixed-dim": "#53e7b1",
         },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+        "on-secondary": "#005a40",
+        "on-secondary-container": "#e0ffee",
+        "on-secondary-fixed": "#004530",
+        "on-secondary-fixed-variant": "#006548",
+
+        // Tertiary Colors
+        tertiary: {
+          DEFAULT: "#74e0ff",
+          dim: "#00c7ec",
+          container: "#00d5fe",
+          fixed: "#00d5fe",
+          "fixed-dim": "#00c7ec",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+        "on-tertiary": "#004f5f",
+        "on-tertiary-container": "#004553",
+        "on-tertiary-fixed": "#002f39",
+        "on-tertiary-fixed-variant": "#004e5f",
+
+        // Error Colors
+        error: {
+          DEFAULT: "#ff716c",
+          dim: "#d7383b",
+          container: "#9f0519",
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+        "on-error": "#490006",
+        "on-error-container": "#ffa8a3",
+
+        // On Surface
+        "on-surface": "#ffffff",
+        "on-surface-variant": "#adaaaa",
+        "on-background": "#ffffff",
+
+        // Outline
+        outline: "#767575",
+        "outline-variant": "#484847",
+
+        // Inverse
+        "inverse-surface": "#fcf9f8",
+        "inverse-on-surface": "#565555",
+        "inverse-primary": "#006e3f",
+
+        // Accent for highlighting
+        accent: "#00ff99",
+      },
+      // Stitch Design System - Typography
+      fontFamily: {
+        headline: ["Space Grotesk", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+        label: ["Space Grotesk", "sans-serif"],
+        mono: ["Space Grotesk", "monospace"],
+      },
+      // Custom animations
+      keyframes: {
+        pulse: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
         },
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        chart: {
-          1: "hsl(var(--chart-1))",
-          2: "hsl(var(--chart-2))",
-          3: "hsl(var(--chart-3))",
-          4: "hsl(var(--chart-4))",
-          5: "hsl(var(--chart-5))",
-        },
+      },
+      animation: {
+        "pulse-slow": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },

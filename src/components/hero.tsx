@@ -1,63 +1,82 @@
-//import { Skills } from "./skills";
-// import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Button } from "./ui/button";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { StatusBadge } from "./status-badge";
+import ProfileCard from "./ProfileCard";
 
 export function Hero() {
   return (
-    <section
-      id="hero"
-      className="flex flex-col scroll-m-48 py-4 items-center gap-10 min-h-screen w-full justify-center block-zoom"
-    >
-      <div className="flex flex-col items-center gap-4">
-        <div className="flex flex-col items-center gap-3">
-          {/* <Avatar className="w-28 h-28">
-            <AvatarImage src="https://github.com/andersonzero0.png" />
-            <AvatarFallback>AV</AvatarFallback>
-          </Avatar> */}
-          <h1 className="scroll-m-20 text-4xl text-center font-extrabold tracking-tight lg:text-5xl">
-            Anderson Viana
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[716px]">
+      {/* Left Column - Content */}
+      <div className="lg:col-span-7 space-y-8">
+        <StatusBadge />
+
+        <div className="space-y-2">
+          <h1 className="text-7xl font-headline font-bold tracking-tighter text-on-surface uppercase leading-none">
+            Anderson
+            <br />
+            <span className="text-primary">Viana.sys</span>
           </h1>
-          <h2 className="scroll-m-20 text-center pb-2 text-2xl font-semibold tracking-tight first:mt-0 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
-            Desenvolvedor de Software
-          </h2>
+          <p className="text-xl font-headline font-medium tracking-tight text-on-surface-variant uppercase">
+            Software Engineer // Full-Stack Developer
+          </p>
         </div>
 
-        <div className="flex flex-row gap-3">
+        <p className="text-lg max-w-xl text-on-surface-variant leading-relaxed">
+          Building robust, scalable applications with modern technologies.
+          Specialized in React, TypeScript, Node.js, and cloud infrastructure.
+          I translate complex business requirements into high-performance
+          technical solutions.
+        </p>
+
+        <div className="flex gap-6">
           <a
             href="https://github.com/andersonzero0"
             target="_blank"
             rel="noopener noreferrer"
+            className="group flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors"
           >
-            <Button className="flex flex-row gap-2 rounded-3xl font-extrabold bg-gradient-to-r from-gray-950 via-gray-700 to-gray-950 text-white border">
-              <Github />
+            <Github size={20} />
+            <span className="font-label text-sm uppercase tracking-widest">
               GitHub
-            </Button>
+            </span>
           </a>
-
           <a
             href="https://www.linkedin.com/in/andersonvianaa"
             target="_blank"
             rel="noopener noreferrer"
+            className="group flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors"
           >
-            <Button className="flex flex-row gap-2 rounded-3xl font-extrabold bg-gradient-to-r from-blue-950 via-blue-700 to-blue-950 text-white border">
-              <Linkedin />
+            <Linkedin size={20} />
+            <span className="font-label text-sm uppercase tracking-widest">
               LinkedIn
-            </Button>
+            </span>
+          </a>
+          <a
+            href="mailto:your-email@example.com"
+            className="group flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors"
+          >
+            <Mail size={20} />
+            <span className="font-label text-sm uppercase tracking-widest">
+              Email
+            </span>
           </a>
         </div>
-
-        {/* <div className="flex flex-row gap-2">
-          <a href="/curriculo.pdf" download>
-            <Button className="flex flex-row gap-2 justify-center items-center dark font-medium rounded-3xl backdrop-blur-3xl">
-              <Download />
-              Baixar Currículo
-            </Button>
-          </a>
-        </div> */}
       </div>
 
-      {/* <Skills /> */}
-    </section>
+      {/* Right Column - Profile Card */}
+      <div className="lg:col-span-5 hidden lg:flex items-center justify-center">
+        <ProfileCard
+          name="Anderson Viana"
+          title="Backend Development Engineer"
+          handle="andersonvianaa"
+          status="Working in @TeddyOpenFinance"
+          avatarUrl="./avatar-background.png"
+          miniAvatarUrl="https://github.com/andersonzero0.png"
+          showUserInfo={true}
+          innerGradient="linear-gradient(145deg, #090909 0%, #101010 78%, rgba(99, 246, 191, 0.08) 100%)"
+          behindGlowEnabled={false}
+        />
+      </div>
+    </div>
   );
 }
+
