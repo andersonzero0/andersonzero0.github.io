@@ -68,7 +68,7 @@ const experiencesData: Experience[] = [
     version: "v5.0",
     company: "Teddy Open Finance",
     period: "Nov 2025 - Atual",
-    role: "Engenheiro de Software Backend Junior II",
+    role: "Engenheiro de Software Backend II",
     description:
       "Atuacao no backend da plataforma White Label para solucoes financeiras personalizadas, com foco em sustentacao, evolucao continua e alta confiabilidade.",
     achievements: [
@@ -82,7 +82,7 @@ const experiencesData: Experience[] = [
     version: "v4.0",
     company: "Teddy Open Finance",
     period: "Abr 2025 - Nov 2025",
-    role: "Engenheiro de Software Backend Junior I",
+    role: "Engenheiro de Software Backend I",
     description:
       "Inicio da trajetoria na Teddy com desenvolvimento backend de APIs REST e operacoes criticas da plataforma financeira.",
     achievements: [

@@ -13,6 +13,14 @@ type Project = {
 export function Projects() {
   const projects: Project[] = [
     {
+      prefix: "platform/audit",
+      title: "Auditoria de Dados",
+      description:
+        "Sistema de auditoria de dados com AWS S3, Athena e PostgreSQL WAL para monitoramento de integridade, rastreabilidade e conformidade em ambientes multi-tenant.",
+      year: "2026",
+      tags: ["NestJS", "AWS", "S3", "SQS", "Athena", "PostgreSQL WAL"],
+    },
+    {
       prefix: "platform/finance",
       title: "Migracao Backend v1 -> v2",
       description:
