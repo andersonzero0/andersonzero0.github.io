@@ -7,7 +7,7 @@ export function Hero() {
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[716px]">
       {/* Left Column - Content */}
       <div className="lg:col-span-7 space-y-8">
-        <StatusBadge />
+        <StatusBadge text="Disponível para novas oportunidades" />
 
         <div className="space-y-2">
           <h1 className="text-7xl font-headline font-bold tracking-tighter text-on-surface uppercase leading-none">
